@@ -35,7 +35,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 /* Navigation */
@@ -260,6 +260,19 @@ body {
     padding: 2rem;
 }
 
+.about-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    transition: var(--transition);
+}
+
+.about-logo:hover {
+    filter: drop-shadow(0 0 30px rgba(255, 102, 178, 0.8)) drop-shadow(0 0 60px rgba(0, 212, 255, 0.6));
+    transform: scale(1.05);
+}
+
 .about h3 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -373,6 +386,17 @@ body {
 }
 
 /* Tour Section */
+.bandsintown-widget-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.bit-widget-container {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+}
+
 .songkick-widget-container {
     max-width: 900px;
     margin: 0 auto;

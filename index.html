@@ -60,6 +60,7 @@
                 <div class="about">
                     <h3>About the Band</h3>
                     <p>Hailing from Ottawa, Canada, Holly Acres brings back the raw energy and emotional depth of early 2000s pop punk. With driving guitar riffs, infectious melodies, and lyrics that hit you right in the feels, we're channeling the spirit of the genre's golden era while carving out our own path. Whether you grew up on Warped Tour compilations or you're just discovering what made that era special, Holly Acres delivers the nostalgic punch and heartfelt honesty that defined a generation.</p>
+                    <img src="assets/white-logo.png" alt="Holly Acres Logo" class="about-logo">
                 </div>
             </div>
         </section>
@@ -69,7 +70,7 @@
             <div class="container">
                 <h2 class="section-title">Music</h2>
                 <div class="music-platforms">
-                    <div class="platform-player spotify-container">
+                    <div class="platform-player">
                         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0pVuSJKSb44X2uTqOWJlPr?utm_source=generator&theme=0" width="100%" height="552" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     </div>
                     <div class="platform-player apple-music-container">
@@ -84,9 +85,94 @@
         <section id="tour" class="section">
             <div class="container">
                 <h2 class="section-title">Tour Dates</h2>
-                <div class="songkick-widget-container">
-                    <a href="https://www.songkick.com/artists/10369031" class="songkick-widget" data-theme="dark" data-track-button="on" data-detect-style="off" data-background-color="rgb(26,26,26)" data-font-color="rgb(255,255,255)" data-button-bg-color="rgb(0,212,255)" data-button-text-color="rgb(0,0,0)" data-locale="en" data-other-artists="on" data-share-button="on" data-country-filter="on" data-rsvp="on" data-request-show="on" data-past-events="off" data-past-events-offtour="off" data-remind-me="off" style="display: none;"></a>
-                    <script src='//widget-app.songkick.com/injector/10369031'></script>
+                <div class="bandsintown-widget-container">
+                    <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+                    <a class="bit-widget-initializer"
+                        data-artist-name="id_15530833"
+                        data-events-to-display=""
+                        data-background-color="rgba(26,26,26,1)"
+                        data-separator-color="rgba(0,212,255,0.3)"
+                        data-text-color="rgba(255,255,255,1)"
+                        data-font="Helvetica"
+                        data-auto-style="true"
+                        data-button-label-capitalization="uppercase"
+                        data-header-capitalization="uppercase"
+                        data-location-capitalization="uppercase"
+                        data-venue-capitalization="uppercase"
+                        data-display-local-dates="true"
+                        data-local-dates-position="tab"
+                        data-display-past-dates="true"
+                        data-display-details="false"
+                        data-display-lineup="false"
+                        data-display-start-time="false"
+                        data-social-share-icon="false"
+                        data-display-limit="all"
+                        data-date-format="MMM. D, YYYY"
+                        data-date-orientation="horizontal"
+                        data-date-border-color="rgba(0,212,255,0.5)"
+                        data-date-border-width="2px"
+                        data-date-capitalization="capitalize"
+                        data-date-border-radius="10px"
+                        data-event-ticket-cta-size="medium"
+                        data-event-custom-ticket-text=""
+                        data-event-ticket-text="TICKETS"
+                        data-event-ticket-icon="false"
+                        data-event-ticket-cta-text-color="rgba(0,0,0,1)"
+                        data-event-ticket-cta-bg-color="rgba(0,212,255,1)"
+                        data-event-ticket-cta-border-color="rgba(0,212,255,1)"
+                        data-event-ticket-cta-border-width="0px"
+                        data-event-ticket-cta-border-radius="20px"
+                        data-sold-out-button-text-color="rgba(255,255,255,1)"
+                        data-sold-out-button-background-color="rgba(74,74,74,1)"
+                        data-sold-out-button-border-color="rgba(74,74,74,1)"
+                        data-sold-out-button-clickable="true"
+                        data-event-rsvp-position="left"
+                        data-event-rsvp-cta-size="medium"
+                        data-event-rsvp-only-show-icon="false"
+                        data-event-rsvp-text="RSVP"
+                        data-event-rsvp-icon="false"
+                        data-event-rsvp-cta-text-color="rgba(0,0,0,1)"
+                        data-event-rsvp-cta-bg-color="rgba(255,102,178,1)"
+                        data-event-rsvp-cta-border-color="rgba(255,102,178,1)"
+                        data-event-rsvp-cta-border-width="0px"
+                        data-event-rsvp-cta-border-radius="20px"
+                        data-follow-section-position="top"
+                        data-follow-section-alignment="center"
+                        data-follow-section-header-text="Get updates on new shows, new music, and more"
+                        data-follow-section-cta-size="medium"
+                        data-follow-section-cta-text="FOLLOW"
+                        data-follow-section-cta-icon="false"
+                        data-follow-section-cta-text-color="rgba(0,0,0,1)"
+                        data-follow-section-cta-bg-color="rgba(0,212,255,1)"
+                        data-follow-section-cta-border-color="rgba(0,212,255,1)"
+                        data-follow-section-cta-border-width="0px"
+                        data-follow-section-cta-border-radius="20px"
+                        data-play-my-city-position="bottom"
+                        data-play-my-city-alignment="center"
+                        data-play-my-city-header-text="Don't see a show near you?"
+                        data-play-my-city-cta-size="medium"
+                        data-play-my-city-cta-text="REQUEST A SHOW"
+                        data-play-my-city-cta-icon="false"
+                        data-play-my-city-cta-text-color="rgba(0,0,0,1)"
+                        data-play-my-city-cta-bg-color="rgba(255,102,178,1)"
+                        data-play-my-city-cta-border-color="rgba(255,102,178,1)"
+                        data-play-my-city-cta-border-width="0px"
+                        data-play-my-city-cta-border-radius="20px"
+                        data-optin-font=""
+                        data-optin-text-color=""
+                        data-optin-bg-color=""
+                        data-optin-cta-text-color=""
+                        data-optin-cta-bg-color=""
+                        data-optin-cta-border-width=""
+                        data-optin-cta-border-radius=""
+                        data-optin-cta-border-color=""
+                        data-language="en"
+                        data-layout-breakpoint="900"
+                        data-app-id="68eba66f57dcb47f0cfe9e2529b8cc8c"
+                        data-affil-code=""
+                        data-bit-logo-position="bottomRight"
+                        data-bit-logo-color="rgba(255,255,255,1)">
+                    </a>
                 </div>
             </div>
         </section>
@@ -104,22 +190,16 @@
                             <li>📱 Follow us on social media</li>
                         </ul>
                         <div class="social-links">
-                            <a href="https://www.facebook.com/HollyAcresBand" class="social-link">Facebook</a>
-                            <a href="https://www.instagram.com/hollyacresmusic/" class="social-link">Instagram</a>
-                            <a href="https://www.tiktok.com/@hollyacresband" class="social-link">TikTok</a>
+                            <a href="https://www.facebook.com/HollyAcresBand" target="_blank" rel="noopener noreferrer" class="social-link">Facebook</a>
+                            <a href="https://www.instagram.com/hollyacresmusic/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+                            <a href="https://www.tiktok.com/@hollyacresband" target="_blank" rel="noopener noreferrer" class="social-link">TikTok</a>
+                            <a href="https://www.youtube.com/@hollyacresband" target="_blank" rel="noopener noreferrer" class="social-link">YouTube</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Holly Acres. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="js/app.js"></script>
 </body>
