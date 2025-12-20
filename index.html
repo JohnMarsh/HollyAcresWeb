@@ -53,15 +53,32 @@
     }
     </script>
     
-    <link rel="icon" type="image/png" href="assets/colour-logo.jpeg">
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://open.spotify.com">
+    <link rel="preconnect" href="https://embed.music.apple.com">
+    <link rel="preconnect" href="https://widgetv3.bandsintown.com">
+    <link rel="preload" href="assets/group-banner.webp" as="image" type="image/webp">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#0a0a0a">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Skip to main content for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="#home" class="logo-link">
-                <svg class="neon-logo" viewBox="0 0 320 70" xmlns="http://www.w3.org/2000/svg">
+            <a href="#home" class="logo-link" aria-label="Holly Acres home">
+                <svg class="neon-logo" viewBox="0 0 320 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Holly Acres logo">
+                    <title>Holly Acres</title>
                     <defs>
                         <filter id="glow">
                             <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
@@ -79,12 +96,12 @@
                     <text x="160" y="50" text-anchor="middle" font-family="'Brush Script MT', 'Lucida Handwriting', cursive" font-size="75" font-style="italic" fill="url(#neonGradient)" filter="url(#glow)" letter-spacing="1">Holly Acres</text>
                 </svg>
             </a>
-            <div class="menu-toggle" id="mobile-menu">
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-menu">
+            </button>
+            <ul class="nav-menu" role="list">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#music" class="nav-link">Music</a></li>
                 <li><a href="#merch" class="nav-link">Merch</a></li>
@@ -95,9 +112,9 @@
     </nav>
 
     <!-- Main Content -->
-    <main id="app">
+    <main id="main-content" role="main">
         <!-- Home Section -->
-        <section id="home" class="section">
+        <section id="home" class="section" aria-labelledby="home-title">
             <div class="hero">
                 <div class="hero-content">
                     <h2 class="hero-title">Holly Acres</h2>
@@ -107,23 +124,26 @@
             </div>
             <div class="container">
                 <div class="about">
-                    <h3>About the Band</h3>
+                    <h3 id="home-title">About the Band</h3>
                     <p>Hailing from Ottawa, Canada, Holly Acres brings back the raw energy and emotional depth of early 2000s pop punk. With driving guitar riffs, infectious melodies, and lyrics that hit you right in the feels, we're channeling the spirit of the genre's golden era while carving out our own path. Whether you grew up on Warped Tour compilations or you're just discovering what made that era special, Holly Acres delivers the nostalgic punch and heartfelt honesty that defined a generation.</p>
-                    <img src="assets/white-logo.png" alt="Holly Acres Logo" class="about-logo">
+                    <picture>
+                        <source srcset="assets/white-logo.webp" type="image/webp">
+                        <img src="assets/white-logo.png" alt="Holly Acres band logo" class="about-logo" loading="lazy" width="200" height="200">
+                    </picture>
                 </div>
             </div>
         </section>
 
         <!-- Music Section -->
-        <section id="music" class="section">
+        <section id="music" class="section" aria-labelledby="music-title">
             <div class="container">
-                <h2 class="section-title">Music</h2>
+                <h2 id="music-title" class="section-title">Music</h2>
                 <div class="music-platforms">
                     <div class="platform-player">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0pVuSJKSb44X2uTqOWJlPr?utm_source=generator&theme=0" width="100%" height="552" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0pVuSJKSb44X2uTqOWJlPr?utm_source=generator&theme=0" width="100%" height="552" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Holly Acres on Spotify"></iframe>
                     </div>
                     <div class="platform-player apple-music-container">
-                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;overflow:hidden;border-radius:12px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ca/artist/holly-acres/1545279771"></iframe>
+                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;overflow:hidden;border-radius:12px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ca/artist/holly-acres/1545279771" title="Holly Acres on Apple Music"></iframe>
                     </div>
                 </div>
                 </div>
@@ -131,9 +151,9 @@
         </section>
 
         <!-- Merch Section -->
-        <section id="merch" class="section">
+        <section id="merch" class="section" aria-labelledby="merch-title">
             <div class="container">
-                <h2 class="section-title">Merch</h2>
+                <h2 id="merch-title" class="section-title">Merch</h2>
                 <div class="merch-container">
                     <div class="merch-content">
                         <h3>Official Holly Acres Merch</h3>
@@ -145,9 +165,9 @@
         </section>
 
         <!-- Tour Section -->
-        <section id="tour" class="section">
+        <section id="tour" class="section" aria-labelledby="tour-title">
             <div class="container">
-                <h2 class="section-title">Tour Dates</h2>
+                <h2 id="tour-title" class="section-title">Tour Dates</h2>
                 <div class="bandsintown-widget-container">
                     <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
                     <a class="bit-widget-initializer"
@@ -241,22 +261,22 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section">
+        <section id="contact" class="section" aria-labelledby="contact-title">
             <div class="container">
-                <h2 class="section-title">Get in Touch</h2>
+                <h2 id="contact-title" class="section-title">Get in Touch</h2>
                 <div class="contact-content-center">
                     <div class="contact-info">
                         <h3>Contact Us</h3>
                         <p>For booking inquiries, press, or general questions:</p>
                         <ul class="contact-list">
-                            <li>📧 hollyacresdband@gmail.com</li>
+                            <li>📧 <a href="mailto:hollyacresdband@gmail.com" aria-label="Email Holly Acres at hollyacresdband@gmail.com">hollyacresdband@gmail.com</a></li>
                             <li>📱 Follow us on social media</li>
                         </ul>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/HollyAcresBand" target="_blank" rel="noopener noreferrer" class="social-link">Facebook</a>
-                            <a href="https://www.instagram.com/hollyacresmusic/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
-                            <a href="https://www.tiktok.com/@hollyacresband" target="_blank" rel="noopener noreferrer" class="social-link">TikTok</a>
-                            <a href="https://www.youtube.com/@hollyacresband" target="_blank" rel="noopener noreferrer" class="social-link">YouTube</a>
+                        <div class="social-links" role="list">
+                            <a href="https://www.facebook.com/HollyAcresBand" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Holly Acres on Facebook (opens in new tab)">Facebook</a>
+                            <a href="https://www.instagram.com/hollyacresmusic/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Holly Acres on Instagram (opens in new tab)">Instagram</a>
+                            <a href="https://www.tiktok.com/@hollyacresband" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Holly Acres on TikTok (opens in new tab)">TikTok</a>
+                            <a href="https://www.youtube.com/@hollyacresband" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Holly Acres on YouTube (opens in new tab)">YouTube</a>
                         </div>
                     </div>
                 </div>

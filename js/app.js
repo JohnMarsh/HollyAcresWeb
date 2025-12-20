@@ -69,8 +69,10 @@ class Navigation {
     init() {
         // Mobile menu toggle
         this.mobileMenu.addEventListener('click', () => {
-            this.navMenu.classList.toggle('active');
+            const isExpanded = this.navMenu.classList.toggle('active');
             this.mobileMenu.classList.toggle('active');
+            // Update ARIA attribute for accessibility
+            this.mobileMenu.setAttribute('aria-expanded', isExpanded);
         });
 
         // Close mobile menu when clicking a link
@@ -78,6 +80,7 @@ class Navigation {
             link.addEventListener('click', () => {
                 this.navMenu.classList.remove('active');
                 this.mobileMenu.classList.remove('active');
+                this.mobileMenu.setAttribute('aria-expanded', 'false');
             });
         });
 

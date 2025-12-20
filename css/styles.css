@@ -32,6 +32,26 @@ body {
     background-color: var(--light-bg);
 }
 
+/* Skip Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--neon-blue);
+    color: var(--dark-bg);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 10000;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--neon-pink);
+    outline-offset: 2px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -119,10 +139,25 @@ body {
     width: 100%;
 }
 
+.nav-link:focus {
+    outline: 2px solid var(--neon-pink);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
 .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+.menu-toggle:focus {
+    outline: 2px solid var(--neon-pink);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .menu-toggle span {
@@ -164,12 +199,19 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('../assets/group-banner.jpeg') center/cover no-repeat;
+    background: url('../assets/group-banner.webp') center/cover no-repeat;
     color: var(--text-light);
     padding: 8rem 0 6rem;
     text-align: center;
     margin-bottom: 4rem;
     position: relative;
+}
+
+/* Fallback for browsers that don't support WebP */
+@supports not (background: url('../assets/group-banner.webp')) {
+    .hero {
+        background: url('../assets/group-banner.jpeg') center/cover no-repeat;
+    }
 }
 
 .hero::before {
@@ -241,6 +283,13 @@ body {
 .btn-primary:hover {
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.8), 0 0 60px rgba(255, 0, 110, 0.6);
     transform: translateY(-2px);
+}
+
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-outline:focus {
+    outline: 3px solid var(--neon-pink);
+    outline-offset: 4px;
 }
 
 .btn-secondary {
@@ -626,7 +675,42 @@ body {
     box-shadow: 0 0 20px var(--neon-blue);
 }
 
+.social-link:focus,
+.contact-list a:focus {
+    outline: 2px solid var(--neon-pink);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
 
+.contact-list a {
+    color: var(--text-light);
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.contact-list a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Improved Focus Visibility for All Interactive Elements */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--neon-pink);
+    outline-offset: 4px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
 
 /* Footer */
 footer {
