@@ -1,0 +1,22 @@
+{
+  "name": "Holly Acres",
+  "short_name": "Holly Acres",
+  "description": "Ottawa pop punk band bringing back the raw energy of early 2000s pop punk",
+  "icons": [
+    {
+      "src": "/assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
